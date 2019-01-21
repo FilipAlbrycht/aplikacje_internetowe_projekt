@@ -1,0 +1,147 @@
+body
+{
+	background-color: #FFFFFF;
+	color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}
+
+h1
+{
+	font-size: 36px;
+	font-weight: 400;
+	color: #000000;
+	margin: 0px;
+	padding-top:20px;
+}
+
+h2
+{
+	font-size: 20px;
+	font-weight: 400;
+	color: #000000;
+	margin: 0px;
+	margin-left: 10px;
+	padding: 20px 0;
+	text-align: left;
+}
+
+.samochody
+{
+	text-align: center;
+	max-width:1100px;
+	margin:auto;
+	background-color: #dcdcdc;
+}
+
+.samochody img
+{
+	width: 100%;
+	height: auto;
+}
+
+.samochody p
+{
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+
+.samochody figcaption
+{
+	margin-top: 8px;
+}
+
+.navbar-nav li:hover>.dropdown-menu
+{
+	display: block;
+}
+
+.navbar
+{
+	min-height: 60px;
+}
+
+.menu-tlo
+{
+	background-color: #2F3336 !important;
+}
+
+nav li a{
+	transition: ease-in-out 0.3s all;
+}
+
+nav li a:hover {
+	background: #999999;
+	transition: ease-in-out 0.3s all;
+	
+}
+#zegar{
+	color:#FFF;
+}
+
+.samochody a:hover {
+	opacity: 0.8;
+	filter: alpha(opacity=70);
+}
+
+.samochody a:hover {
+	opacity: 0.8;
+	filter: alpha(opacity=70);
+}
+
+#stopka {
+	background: #dcdcdc;
+	max-width: 1100px;
+}
+
+#zawartosc_stopki {
+	width: auto;
+	padding: 0 30px;
+	position: relative;
+	margin: 0 auto;
+}
+
+#stopka div > div{
+	float: left;
+}
+
+#stopka ul {
+	list-style: square;
+	padding-left: 20px;
+	padding-bottom:5px;
+}
+
+#stopka ul li {
+	padding: 5px 0;
+	font-size: 14px;
+	color: #333;
+}
+
+#stopka ul li a {
+	text-decoration: none;
+	color: #333;
+}
+
+#stopka ul li a:hover {
+	color: #000000;
+}
+
+#stopka h3 {
+	margin: 25px 0 15px 0;
+	font-weight: normal;
+}
+
+#dol_strony {
+	width: 100%;
+	background: #2F3336;
+	height: 60px;
+}
+
+#dol_strony p {
+	text-align:center;
+	padding-top:18px;
+	font-size: 17px;
+	color: #fff;
+}
+
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<title>Samochody do wynajecia</title>
+	<meta name="description" content="Wynajem samochodów transportowych">
+	<meta name="keywords" content="samochód, samochod, transport, wynajem">
+	<meta name="author" content="Filip Albrycht">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/ikona.ico"/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	
+</head>
+
+<body onload="startTime()">
+
+	<header>
+	
+		<nav class="navbar navbar-dark menu-tlo navbar-expand-lg">
+		
+			<a class="navbar-brand" href="index.html"><img src="img/logo.png" width="30" height="30" class="d-inline-block mr-1" alt=""> samochody-do-wynajecia.pl</a>
+		
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		
+			<div class="collapse navbar-collapse" id="mainmenu">
+			
+				<ul class="navbar-nav mr-auto">
+				</ul>
+                
+                <div id="zegar"></div>
+			
+			</div>
+		
+		</nav>
+	
+	</header>
+	
+	<main>
+		
+		<section class="samochody">
+		
+			<div class="container">
+                <h2>Samochód 1 </h2>
+				<div class="row">
+                    <div class="col-sm-6">
+						<figure>
+							<p><img src="img/samochod1.jpg" alt="Samochód 1" align="left"></p>
+						</figure>
+			</div>
+			<div class="col-sm-6">
+							<p>Rocznik: 2011</p>
+							<p>Moc silnika: 102KM</p>
+							<p>Paliwo: diesel</p>
+							<p>Skrzynia biegów: manualna</p>
+							<p>Ładowność: 1000kg</p>
+							<p>Ilość miejsc: 9</p>
+							<p>Cena wynajmu za dobę: 200zł</p>
+					</div>
+			</div>
+			</div>
+		</section>
+		
+	</main>
+    
+	<footer id="stopka" class="container">
+		<div id="zawartosc_stopki" class="row">
+            <div id="oferta" class="col-sm-4">
+                <h3>Nasze placówki znajdziesz w:</h3>
+                <ul>
+                    <li>Rzeszowie - ul. Zielona 1</li>
+                    <li>Jaśle - ul. Czerwona 3a</li>
+                    <li>Krośnie - ul. Czarna 4</li>
+                    <li>Krakowie - ul. Biała 13</li>
+                    <li>Warszawie - ul. Niebieska 21</li>
+        		</ul>
+        	</div>
+            
+            <div id="cennik" class="col-sm-4">
+                <h3>Godziny otwarcia</h3>
+                <ul>
+                    <li>Poniedziałek, wtorek: 7:00-18:00</a></li>
+                    <li>Środa: 10:00 - 20:00</a></li>
+                    <li>Czwartek, piątek: 8:00 - 18:00</a></li>
+                    <li>Sobota: 7:00 - 15:00</a></li>
+                    <li>Niedziela: nieczynne</a></li>
+                </ul>
+            </div>
+            <div id="kontakt" class="col-sm-4">
+                <h3>Kontakt</h3>
+                <ul>
+                    <li>Telefon: +48 500 000 000</a></li>
+                    <li>Adres e-mail: samochody-do-wynajecia@gmail.com</a></li>
+                    <li>Facebook: </a></li>
+                    <li>Instagram: </a></li>
+                    <li>Twitter: </a></li>
+                </ul>
+            </div>
+		</div>
+	</footer>
+    
+    <script>
+		function startTime() {
+			var today = new Date();
+			var d = today.getDay();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			
+			switch (d){
+				case 1:
+					d = "Poniedziałek";
+				 break;
+				 case 2:
+					d = "Wtorek";
+				 break;
+				 case 3:
+					d = "Środa";
+				 break;
+				 case 4:
+					d = "Czwartek";
+				 break;
+				 case 5:
+					d = "Piątek";
+				 break;
+				 case 6:
+					d = "Sobota";
+				 break;
+				 case 0:
+					d = "Niedziela";
+				 break;
+				 default:
+					d = "Niepoprawny dzień!";
+				 break;
+			 }
+			 
+			document.getElementById('zegar').innerHTML = d + ", " + h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};
+			return i;
+		}
+	</script>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	
+	<script src="js/bootstrap.min.js"></script>
+	
+	<script>
+
+	$( document ).ready( function () {
+		$( '.dropdown' ).on( 'click', function ( e ) {
+			var $el = $( this );
+			var $parent = $( this ).offsetParent( ".dropdown-menu" );
+			if ( !$( this ).next().hasClass( 'show' ) ) {
+				$( this ).parents( '.dropdown-menu' ).first().find( '.show' ).removeClass( "show" );
+			}
+			var $subMenu = $( this ).next( ".dropdown-menu" );
+			$subMenu.toggleClass( 'show' );
+			
+			$( this ).parent( "li" ).toggleClass( 'show' );
+
+			$( this ).parents( 'li.nav-item.dropdown.show' ).on( 'hidden.bs.dropdown', function ( e ) {
+				$( '.dropdown-menu .show' ).removeClass( "show" );
+			} );
+			
+			 if ( !$parent.parent().hasClass( 'navbar-nav' ) ) {
+				$el.next().css( { "top": $el[0].offsetTop, "left": $parent.outerWidth() - 4 } );
+			}
+
+			return false;
+		} );
+	} );
+	
+	</script>
+	
+</body>
+</html>
